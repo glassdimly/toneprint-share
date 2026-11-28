@@ -11,7 +11,7 @@ Editor 4.7.0.6. The file layout of this effect has not been decoded yet.
 | **VIBE** | Attack (s), Release (s), Drive (dB), Highcut Freq, Highcut Damp (dB), Mix (%), Boost (dB), Out Level (dB), Feedback (%); further down, Subtype and Depth (%) |
 | **MODULATION** | Speed (Hz), Depth 1-3 (%), Mod HiCut, Mod Mix (%), Output Level (dB), Delay Time 1-3 (ms), Mod Feedback, Mod Feedback HiCut. Mod Type, Mod Active, Tape Flanger and LFO Type are also in the parameter list |
 | **MAPPING / EXPRESSION PEDAL / MASH** | 3 slots each |
-| **PRODUCT SETTINGS** | Pedal-level options (not examined) |
+| **PRODUCT SETTINGS** | Not examined |
 
 ## Parameters available to MASH, knobs and expression pedal
 
@@ -25,15 +25,13 @@ In menu order:
 
 **Vibe Subtype** options: Modern, Vintage, Vintage2, Simple.
 
-**Ramp:** the vibe runs at Default Speed. Holding the footswitch moves it to High Speed over the
-Attack time, and releasing moves it back over the Release time (0.05-5 s each). Holding changes
-the speed; it does not switch the vibe on or off.
-
+Per the editor manual: Default Speed is the normal speed and High Speed the speed in Ramp mode;
+Attack is the time to change speed in Ramp mode and Release the time to return (0.05-5 s each).
 Ranges: Drive and Boost 0-12 dB, Mix and Depth 0-100 %, Out Level -100-0 dB, Feedback -100-100 %,
-Default Speed and High Speed 0.2-20 Hz.
+Default Speed and High Speed 0.2-20 Hz. Ramp mode was not tested.
 
-Default Speed, High Speed, PhaRevLeft and PhaRevRight (phase invert on the left / right output) appear
-in the mapping list; they were not in the screenshots of the VIBE tab examined.
+Default Speed, High Speed, PhaRevLeft and PhaRevRight appear in the mapping list but were not in the
+screenshots of the VIBE tab.
 
 ## Values in the TonePrint examined
 

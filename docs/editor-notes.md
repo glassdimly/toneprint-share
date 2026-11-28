@@ -17,12 +17,9 @@ Behaviour that applies to every effect, seen with TonePrint Editor 4.7.0.6 and a
   the slot being edited.
 - **To test without your foot,** set the MASH slot to "No selection" and drag the parameter on screen.
   Put the mapping back before saving.
-- **User TonePrints stay on the computer that made them.** The editor has no sharing; `.tpr`
-  export and import is the only way to move them.
+- **Moving TonePrints:** the editor's export and import (`.tpr` files) moved them between editor installs.
 - **Importing replaces by ID.** A `.tpr` whose `toneprintId` matches an existing TonePrint
   overwrites it, even if the name differs.
-- **Greyed-out does not mean unused.** The editor greys some parameters out depending on the mode, but
-  the pedal can still use the stored value (see Wham in the [Brainwaves guide](brainwaves-guide.md)). Editing the file is the only way to
-  change them.
-- A **PRODUCT SETTINGS** tab (shown only for some products) holds things like turning MASH on or off and
-  calibrating an expression pedal. Not tested here.
+- **Greyed out but used:** in Brainwaves Wham mode, ToneBend Tone is greyed out in the editor, but
+  changing it in the file changed the bend (see the [Brainwaves guide](brainwaves-guide.md)).
+- **PRODUCT SETTINGS** tab: not examined.

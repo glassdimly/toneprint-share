@@ -19,12 +19,8 @@ Start from any Brainwaves TonePrint of your own, export it, then apply:
 | 10=-1000 | Dry Level -100 dB |
 | 19=1, 20=1000 | Link Mix on, Common Mix 100 %, so nothing is left unshifted |
 | 21=25 | Voice 1 Harmony at the knob centre (the resting pitch) |
-| 32=37 | Voice 2 Harmony, a starting point; tune it to the octave by ear with the VOICE 2 knob |
+| 32=37 | Voice 2 Harmony; 37 is not confirmed as an exact octave, so tune it with the VOICE 2 knob |
 | 54-67 | MIX knob -> Bend time for both voices, 10 / 50 / 150 / 400 / 1000 ms |
 | 138-151 | MASH -> ToneBend % for both voices; full swoop from a light press |
 
 Remove any existing mapping on the VOICE 2 knob only if you want the interval fixed.
-
-**Shimmer on top:** put MASH slot 3 (words 152-158) on Common Delay Feedback
-(`152=1 153=8 154=0 155=60 156=60 157=60 158=60`), with Link Delay on and a Common Delay
-of about 180 ms (`13=1 14=180`).

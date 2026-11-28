@@ -7,23 +7,21 @@ TonePrint Editor 4.7.0.6. The file layout of this effect has not been decoded ye
 
 | Tab | Controls |
 | --- | --- |
-| **ROUTER** | Kill Dry (on/off), FX Level (-100-0 dB) |
+| **ROUTER** | Kill Dry, FX Level (per the editor manual; not in the screenshots) |
 | **MODULATION** | Mod Type, Mod Active, Tape Flanger, 1. LFO Type, Speed, Depth 1-3, Mod HiCut, Mod Mix, Output Level, Delay Time 1-3, Mod Feedback, Mod Feedback HiCut, **Ramp Time** |
 | **MAPPING / EXPRESSION PEDAL / MASH** | 3 slots each |
-| **PRODUCT SETTINGS** | Pedal-level options (not examined) |
+| **PRODUCT SETTINGS** | Not examined |
 
-The MODULATION tab is the same block used by other effects (Flashback 2 and Viscous Vibe have it too),
-plus **Ramp Time** (0-5000 ms), which only Shaker Vibrato has.
+The MODULATION tab has the same controls as the one in Flashback 2 and Viscous Vibe, plus **Ramp Time**.
 
 ## Mod Type
 
 Options: Classic Cho, Adv.Cho, Classic Fla, Adv.Flanger, Vibrato, Vib.Ramp, TriChorus, TriChoAltn,
 TZFlanger (the list may continue).
 
-- **Vibrato:** the vibrato runs whenever the effect is on.
-- **Vib.Ramp:** the 2012 editor manual describes it as vibrato that is applied only while the
-  footswitch of a Shaker Vibrato pedal is held, with Ramp Time as the build-up time. Its behaviour on the
-  Plethora X5 has not been tested yet.
+- **Vibrato:** vibrato audible whenever the slot was on.
+- **Vib.Ramp:** the 2012 editor manual describes it as vibrato applied only while the footswitch of a
+  Shaker Vibrato pedal is held, with Ramp Time as the build-up time. Not tested on the Plethora X5.
 
 ## Observed behaviour
 

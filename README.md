@@ -13,7 +13,7 @@ parameters that TonePrint Editor greys out or limits, then import the result bac
 ## Walkthrough: unlock a greyed-out setting
 
 Example: in **Wham** mode, Brainwaves greys out **ToneBend Tone** (how far the MASH swoop
-goes), so you can't make Voice 2 bend at all. Here's how to set it to a full octave anyway.
+goes), so you can't change it in the editor. Here's how to set it to +1200 cents anyway.
 
 ### 1. Export a TonePrint from the editor
 

@@ -7,19 +7,16 @@ What the editor shows for Flashback 2 Delay on a Plethora X5, TonePrint Editor 4
 
 | Tab | What's on it |
 | --- | --- |
-| **ROUTER** | Input Level, FX Level (the delay's volume), Octaver to FX (feeds the octaver into the delay), Kill Dry (removes the unprocessed guitar) |
-| **DELAY** | Delay 1 / Delay 2 times, Feedback / Feedback 2, Saturation, a high cut and low cut on the repeats, an optional Feedback EQ (type, freq, gain, bandwidth, slope, cut order), Pan 1/2, Output Level, Width, the Dynamic settings (Sens, Damping, Release: ducking the repeats while you play) and Reverse Delay |
+| **ROUTER** | Input Level, FX Level, Octaver to FX (dB), Kill Dry (on/off) |
+| **DELAY** | Delay 1, Delay 2, Feedback, Feedback 2, Saturation, Feedback HiCut, Feedback LoCut, Feedback EQ Type, Freq, Gain, BW, Slope, Cut Order, Pan 1/2, Output Level, Width, Dynamic Delay Sens, Dynamic Damping, Dynamic Release, Reverse Delay |
 | **MODULATION** | Mod Type (e.g. Vib.Ramp), Mod Active, Tape Flanger, LFO Type (e.g. Triangle), Speed, Depth 1-3, Mod HiCut, Mod Mix, Output Level, Delay Time 1-3, Mod Feedback and its HiCut |
-| **OCTAVER** | An octave-up generator (filter bank, Q, output high cut, drive). Silent unless Router > Octaver to FX is turned up |
-| **MAPPING / EXPRESSION PEDAL / MASH** | What the knobs, an expression pedal and MASH pressure control (3 slots each) |
-| **PRODUCT SETTINGS** | Pedal-level options (not tested) |
+| **OCTAVER** | Input Filter First, Input Filter Spacing, Input Filter Count, Input Filter Q, Input Filter Q Tilt, Q Output Rel Up, FX Level Up, Output HiCut Freq, Drive |
+| **MAPPING / EXPRESSION PEDAL / MASH** | 3 slots each |
+| **PRODUCT SETTINGS** | Not examined |
 
-Greyed-out controls belong to modes or settings that are switched off (e.g. Delay 2 when only one tap
-is in use). A **link icon** above a value means a knob, the pedal or MASH is mapped to it. The value
-shown is then the live one, not the stored one.
+A **link icon** appears above values that are mapped to a knob, the expression pedal or MASH.
 
 ## Observed behaviour
 
 - With MASH slot 1 set to Router - FX Level and MASH not pressed, the ROUTER tab showed FX Level as
-  -4.0 dB with a link icon. The export showed a knob also mapped to FX Level (-79 to 0 dB); the
-  knob's value applied.
+  -4.0 dB with a link icon, and the delay was audible.
