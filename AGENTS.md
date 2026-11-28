@@ -5,7 +5,7 @@ Shifter on a Plethora X5) by editing `.tpr` export files with `tpr.py`. Read the
 
 1. **This file**: the workflow and the rules.
 2. **[FORMAT.md](FORMAT.md)**: the file layout and the word map (which number is which setting, and how sure each is).
-3. **[docs/brainwaves-guide.md](docs/brainwaves-guide.md)**: how the modes and settings actually behave,
+3. **[docs/](docs/)**: how each effect's settings actually behave ([general editor notes](docs/editor-notes.md), [Brainwaves](docs/brainwaves-guide.md), [Flashback 2](docs/flashback2-guide.md), [Viscous Vibe](docs/vibe-guide.md), [Shaker Vibrato](docs/shaker-guide.md)),
    including the common traps.
 4. **[recipes/](recipes/)**: presets known to work.
 
@@ -44,6 +44,10 @@ every **confirmed** entry in FORMAT.md was found. Update FORMAT.md when you conf
 - The user hears the pedal and you don't. Turn their descriptions into checks: "only a harmony moves" means
   Common Mix is below 100 % or a voice isn't bending; "it does nothing" means wrong subtype, a mapped
   knob overriding the value, or a delay time of 0.
+- "The effect is still on at rest / still wobbles with the effect turned off": the Plethora X5 runs 5
+  slots in a chain, so first check that no other slot is adding the sound (turn slots off one at a
+  time). Also check that the editor is live: a big change such as FX Level -100 dB should be audible. If it
+  isn't, the pedal is playing the saved version; save the TonePrint to the pedal and retest.
 - Remember the units: levels are in 0.1 dB, mix in 0.1 %, bends in cents (1200 = an octave), times in ms.
 
 ## Repo hygiene

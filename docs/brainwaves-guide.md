@@ -4,36 +4,14 @@ Practical notes gathered while building an octave-swoop TonePrint on a Plethora 
 TonePrint Editor 4.7.0.6. They are written from our own testing: what we changed, and what we heard or
 saw. Where a note is a guess rather than a test, it says so. Word numbers refer to [FORMAT.md](../FORMAT.md).
 
-## How the editor works
-
-- **Everything is live.** While the pedal is connected and the slot is on, every change you make in
-  the editor plays through the pedal immediately. You can audition without storing.
-- **Knobs, expression pedal and MASH each have 3 mapping slots.** Each slot drives one parameter
-  along a 5-point curve (at 0, 25, 50, 75 and 100 % of the knob, pedal or pressure). A curve can
-  run backwards or be flat.
-- **A mapped knob wins.** If a parameter is mapped to a physical knob, the knob's position
-  overrides the value set on screen. If a value "won't stick", check the MAPPING tab.
-- **MASH** is the pressure-sensitive footswitch. A click turns the effect on or off, and pressure
-  after that drives the mapped parameters. A curve that only rises late (for example 0, 0, 30, 62, 100) feels
-  sluggish. For an instant, switch-like response use 0, 100, 100, 100, 100.
-- **To test without your foot,** set the MASH slot to "No selection" and drag the parameter on screen.
-  Put the mapping back before saving.
-- **User TonePrints stay on the computer that made them.** The editor has no sharing; `.tpr`
-  export and import is the only way to move them.
-- **Importing replaces by ID.** A `.tpr` whose `toneprintId` matches an existing TonePrint
-  overwrites it, even if the name differs.
-- **Greyed-out does not mean unused.** The editor greys some parameters out depending on the mode, but
-  the pedal can still use the stored value (see Wham below). Editing the file is the only way to
-  change them.
-- A **PRODUCT SETTINGS** tab (shown only for some products) holds things like turning MASH on or off and
-  calibrating an expression pedal. Not tested here.
+General editor behaviour is in [editor-notes.md](editor-notes.md).
 
 ## Brainwaves modes (COMMON > Subtype, word 9)
 
 | Subtype | What it does | Notes from testing |
 | --- | --- | --- |
 | **Pitch** (0) | Fixed-interval harmonizer | Each voice sits at its interval. ToneBend did not move the pitch, so MASH appeared to do nothing. |
-| **V1V2** (1) | ToneBend morphs from Voice 1's interval to Voice 2's | The best-sounding swoop. Set Voice 1 to unison, tune Voice 2 to the target interval, and set Common Mix to 100 %. |
+| **V1V2** (1) | ToneBend morphs from Voice 1's interval to Voice 2's | With Voice 1 at unison and Voice 2 at another interval, MASH sweeps the pitch between them. Common Mix 100 % shifts the whole note; lower values keep part of the dry signal. |
 | **Wham** (2) | Whammy-style bend driven by ToneBend % toward ToneBend Tone | ToneBend Tone is greyed out but is used. Custom Voice has no effect. Sounded thin or soft at the top for us. |
 | **Detune** (3) | Detuning | Not tested. |
 
@@ -43,8 +21,12 @@ saw. Where a note is a guess rather than a test, it says so. Word numbers refer 
 - **Dry Level** (word 10, 0.1 dB): the unprocessed signal. Set -100 dB to hear only the voices.
 - **Common Mix** (word 20, 0.1 %) together with **Link Mix** (word 19): when linked, Common Mix sets the voices' share.
   **Below 100 % some of the note stays unshifted.** That is the usual cause of "the root doesn't move".
-- **Wet Level** (per voice, 0.1 dB): the voice's volume. Muting one voice of two drops the level a lot.
+- **Wet Level** (per voice, 0.1 dB): the voice's volume. **It can't go above 0 dB**: a knob mapped to
+  +12 dB stops at 0. Muting one voice of two drops the level a lot.
   If one voice is muted and the other moves, the result is quieter.
+- **The shifter changes the tone even at unison.** With Common Mix at 100 % and the voice at unison,
+  a distorted guitar came out quieter, duller and garbled compared with bypass. Putting the
+  distortion after the Plethora reduced this.
 - **Volume drop or clipping when engaged:** shifted voices can come out quieter or hotter than
   dry. SoftClipper **Drive** adds level (a factory TonePrint used about 17 dB with a gritty type);
   for headroom, lower each Wet Level by about 3 dB. Lowering Common Mix brings the unshifted root back,
